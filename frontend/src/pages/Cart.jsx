@@ -22,7 +22,7 @@ const fetchCart = () => {
 
   const removeItem=(id) => {
     axios
-      .delete(`http://localhost:5000/api/cart/${id}`)
+      .delete(`https://e-commerce-backend-19g3.onrender.com/api/cart/${id}`)
       .then(() => fetchCart())
       .catch((err) => console.log(err));
   };
@@ -47,7 +47,7 @@ const fetchCart = () => {
 
   const updateQuantity = (id, quantity) => {
     axios
-      .put(`http://localhost:5000/api/cart/${id}`, { quantity })
+      .put(`https://e-commerce-backend-19g3.onrender.com/api/cart/${id}`, { quantity })
       .then(() => fetchCart())
       .catch((err) => console.log(err));
   }
